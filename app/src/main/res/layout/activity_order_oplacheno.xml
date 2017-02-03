@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#E9E9E9">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Master Grill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <Button
+                android:text="№ 20170121"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button6"
+                android:layout_weight="2"
+                android:textSize="30sp"
+                android:background="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:text="Клиент"
+                android:id="@+id/button3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="10dp" />
+
+
+            <Button
+                android:text="Гость"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:padding="10dp">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/itog"
+                android:id="@+id/zakaz" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button5"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:id="@+id/itog">
+
+                <TextView
+                    android:text="Итог"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:text="0 грн."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <Button
+                android:text="Оплачено"
+                android:layout_width="match_parent"
+                android:id="@+id/button5"
+                android:layout_alignParentBottom="false"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:layout_above="@+id/button39" />
+
+            <Button
+                android:text="Закрыть"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button39"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/darker_gray"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="15dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

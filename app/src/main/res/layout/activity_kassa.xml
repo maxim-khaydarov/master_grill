@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginBottom="110dp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:background="@android:color/white"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:text="Нет групп. \nДобавьте хоть одну!"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView44"
+                android:layout_alignTop="@+id/group"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:visibility="gone" />
+
+            <TextView
+                android:text="Группы"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView42"
+                android:textSize="30sp" />
+
+            <ListView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:id="@+id/group"
+                android:layout_below="@+id/textView42"
+                android:layout_marginTop="20dp"
+                android:layout_above="@+id/button32"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:text="Новая группа"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button32"
+                android:layout_alignParentEnd="false"
+                android:background="@android:color/holo_blue_light"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:padding="20dp">
+
+            <TextView
+                android:text="Меню"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView45"
+                android:textSize="30sp"
+                android:layout_alignParentTop="true" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView45"
+                android:id="@+id/tablerow">
+
+                <TextView
+                    android:text="Наименование"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView54"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:text="Группа"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView53"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:text="Цена"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView52"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/bludo"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/tablerow"
+                android:layout_above="@+id/button35" />
+
+            <Button
+                android:text="Новое блюдо"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button35"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:background="@android:color/holo_blue_light"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:text="Касса"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView20" />
+</LinearLayout>

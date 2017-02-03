@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E9E9">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/log"
+                    android:layout_width="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Master Grill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <Button
+                    android:text="№ 20170121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button6"
+                    android:textSize="30sp"
+                    android:background="@android:color/white"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <Button
+                    android:text="Меню"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button4"
+                    android:layout_width="150dp"
+                    android:background="#AED5F9"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:background="@android:color/background_light"
+                    android:paddingLeft="10dp"
+                    android:hint="Поиск" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+
+                    <GridView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/gridView1"
+                        android:gravity="center"
+                        android:stretchMode="none"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:numColumns="auto_fit"
+                        android:drawSelectorOnTop="true"
+                        android:columnWidth="200dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/top"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_dark">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button16"
+                                android:background="@android:color/transparent"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                            <TextView
+                                android:text="Пицца"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView4"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView2"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/darker_gray">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button17"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="Шаурма"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView5"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView3"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_weight="1">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button18"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="Чай"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView6"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView4"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/midle"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@android:color/holo_red_dark"
+                            android:layout_weight="1">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button19"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView7"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView5"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_blue_dark">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button20"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView8"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView6"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="?attr/colorButtonNormal">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button21"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView9"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView7"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:id="@+id/bottom">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@android:color/holo_green_light"
+                            android:layout_weight="1">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button22"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView10"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView8"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_orange_light">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button23"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView11"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView9"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_purple">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/button24"
+                                android:background="@android:color/transparent" />
+
+                            <TextView
+                                android:text="TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView12"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="25sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:id="@+id/imageView10"
+                                android:layout_margin="20dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Клиент"
+                android:id="@+id/button3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="10dp" />
+
+
+            <Button
+                android:text="Гость"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            android:padding="10dp">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/itog"
+                android:id="@+id/zakaz" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button5"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:id="@+id/itog">
+
+                <TextView
+                    android:text="Итог"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:text="0 грн."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <Button
+                android:text="Оплата"
+                android:layout_width="match_parent"
+                android:id="@+id/button5"
+                android:layout_alignParentBottom="true"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_blue_light"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

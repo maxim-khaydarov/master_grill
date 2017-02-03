@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E9E9">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/tabhost">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true">
+
+                <ToggleButton
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn="ОТЧЕТ"
+                    android:id="@+id/toggleButton"
+                    android:background="@drawable/toggle_selector1"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="30sp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="20dp"
+                    android:hint="ОТЧЕТ"
+                    android:textColorHint="?attr/colorControlHighlight"
+                    android:textOff="" />
+
+                <ToggleButton
+                    android:text="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff=""
+                    android:textOn="НАСТРОЙКИ"
+                    android:hint="НАСТРОЙКИ"
+                    android:id="@+id/toggleButton2"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="?attr/colorControlHighlight"
+                    android:background="@drawable/toggle_selector2"
+                    android:textSize="30sp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingTop="20dp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </TabHost>
+</LinearLayout>

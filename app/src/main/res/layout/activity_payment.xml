@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E9E9">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Сума клиента:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:textSize="30sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="40sp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Cумма грн." />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:background="@android:color/white"
+                android:id="@+id/oplata">
+
+                <TextView
+                    android:text="К оплате:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView15"
+                    android:textSize="30sp"
+                    android:paddingRight="50dp"
+                    android:paddingLeft="50dp"
+                    android:paddingTop="20dp" />
+
+                <TextView
+                    android:text="0 грн."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView14"
+                    android:textSize="30sp"
+                    android:paddingLeft="50dp"
+                    android:paddingBottom="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oplata"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:layout_alignLeft="@+id/oplata"
+                android:layout_alignRight="@+id/oplata"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:text="Сдача:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView17"
+                    android:textSize="30sp"
+                    android:paddingLeft="50dp"
+                    android:paddingTop="20dp" />
+
+                <TextView
+                    android:text="- - грн."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView16"
+                    android:textSize="30sp"
+                    android:paddingLeft="50dp"
+                    android:paddingBottom="20dp" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_layout">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:text="1"
+                        android:id="@+id/button9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="2"
+                        android:id="@+id/button8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="3"
+                        android:id="@+id/button7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:text="4"
+                        android:id="@+id/button12"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="5"
+                        android:id="@+id/button11"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="6"
+                        android:id="@+id/button10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:text="7"
+                        android:id="@+id/button15"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="8"
+                        android:id="@+id/button14"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="9"
+                        android:id="@+id/button13"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:text="."
+                        android:id="@+id/button27"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="0"
+                        android:id="@+id/button26"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="Del"
+                        android:id="@+id/button25"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:textSize="30sp" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="80dp">
+
+                <Button
+                    android:text="Оплатить"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button29"
+                    android:padding="40dp"
+                    android:background="@android:color/holo_green_light"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:text="Отменить"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button28"
+                    android:padding="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_red_dark"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
