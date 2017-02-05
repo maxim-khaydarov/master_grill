@@ -40,6 +40,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -78,16 +79,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 String itemJson = ((TextView) itemClicked.findViewById(R.id.json)).getText().toString();
                 String itemNumber = ((TextView) itemClicked.findViewById(R.id.number_zakaza)).getText().toString();
                 String itemSumma = ((TextView) itemClicked.findViewById(R.id.summa)).getText().toString();
+                String ids = ((TextView)itemClicked.findViewById(R.id.id)).getText().toString();
 
 
-                showDialog(itemNumber, itemSumma, itemJson);
+                showDialog(itemNumber, itemSumma, itemJson, ids);
             }
         });
 
 
     }
 
-    private void showDialog(String number_zakaza, String summa, String json) {
+    private void showDialog(String number_zakaza, String summa, String json, final String ids) {
 
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -146,6 +148,7 @@ Log.e("", v.toString());
 
 
         Button Button6 = (Button) dialog.findViewById(R.id.button6);
+        Button del = (Button) dialog.findViewById(R.id.button40);
         Button6.setText(number_zakaza);
         TextView itog = (TextView) dialog.findViewById(R.id.textView2);
         itog.setText(summa);
@@ -156,6 +159,22 @@ Log.e("", v.toString());
                 dialog.dismiss();
             }
         });
+
+        del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int delCount1 = db.delete("zakazi", "id = " + "'" + ids + "'" , null);
+                try {
+                    getInfo();
+                }
+                catch (Exception f){
+
+                }
+                dialog.dismiss();
+            }
+        });
+
+
 
         dialog.show();
 
@@ -171,7 +190,6 @@ Log.e("", v.toString());
             case R.id.button:
                 Intent order = new Intent(this, NewOrder.class);
                 order.putExtra("sample_name", 1);
-
                 startActivity(order);
                 break;
 
@@ -318,46 +336,18 @@ Log.e("", v.toString());
         }
 
 
-        adapter.clear();
-        Date ff = new Date();
 
-        SimpleDateFormat simpleDate =  new SimpleDateFormat("yyyyMMdd");
-        String strDt = simpleDate.format(ff);
 
 
         try {
-            getInfo(strDt);
+            getInfo();
             //adapter.add(getInfo("20170124"));
             //adapter.notifyDataSetChanged();
         }catch (Exception b){
             Log.e("LOG_TAG_MAIN", "TROUBLE ADD - " + b.getMessage());
             System.out.print(b.getMessage());
         }
-/*
-        try {
 
-            Cursor c = db.query("zakazi", null, null, null, null, null, null);
-            if (c != null) {
-                if (c.moveToFirst()) {
-                    String str;
-                    do {
-                        str = "";
-                        for (String cn : c.getColumnNames()) {
-                            str = str.concat(cn + " = "
-                                    + c.getString(c.getColumnIndex(cn)) + "; ");
-                        }
-                        Log.d("LOG_TAG_onResume_zakazi", str);
-
-                    } while (c.moveToNext());
-                }
-            }
-            else{
-                Log.e("LOG_TAG", "КУРСОР = null");
-            }
-        }catch(Exception n){
-            Log.e("LOG_MAIN", "TROUBLE");
-        }
-*/
     }
 
 
@@ -417,9 +407,9 @@ Log.e("", v.toString());
                     .setText(hi.number_zakaz);
             ((TextView) convertView.findViewById(R.id.summa))
                     .setText(hi.summa_zakaz + " грн.");
-            //Log.e("CAT_ADAPTER", "hi.date = " + strDt + ". hi.number_zakaz = " + hi.number_zakaz);
             ((TextView) convertView.findViewById(R.id.json))
                     .setText(hi.json);
+            ((TextView)convertView.findViewById(R.id.id)).setText(hi.id);
 
 
             return convertView;
@@ -428,12 +418,17 @@ Log.e("", v.toString());
 
 
 
-    public Zakaz getInfo(String search_str) {
+    public Zakaz getInfo() {
+        adapter.clear();
+        Date ff = new Date();
+
+        SimpleDateFormat simpleDate =  new SimpleDateFormat("yyyyMMdd");
+        String strDt = simpleDate.format(ff);
         adapter.clear();
         Zakaz ho = null;
         ///////////////
 
-        String query = "SELECT * FROM zakazi where date LIKE '%"+search_str+"%'";
+        String query = "SELECT * FROM zakazi where date LIKE '%"+strDt+"%'";
 
         Cursor mCursor = null;
 

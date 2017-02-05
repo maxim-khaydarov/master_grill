@@ -43,8 +43,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textOff=""
-                    android:textOn="НАСТРОЙКИ"
-                    android:hint="НАСТРОЙКИ"
+                    android:textOn="МЕНЮ"
+                    android:hint="МЕНЮ"
                     android:id="@+id/toggleButton2"
                     android:layout_marginBottom="10dp"
                     android:textColorHint="?attr/colorControlHighlight"
@@ -54,6 +54,23 @@
                     android:paddingLeft="40dp"
                     android:paddingRight="40dp"
                     android:paddingTop="20dp" />
+
+                <ToggleButton
+                    android:text="ToggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOn="НАСТРОЙКИ"
+                    android:hint="НАСТРОЙКИ"
+                    android:id="@+id/toggleButton3"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="?attr/colorControlHighlight"
+                    android:background="@drawable/toggle_selector3"
+                    android:textSize="30sp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingTop="20dp"
+                    android:textOff=""/>
             </LinearLayout>
 
             <FrameLayout

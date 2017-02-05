@@ -13,7 +13,7 @@ import android.widget.ToggleButton;
 public class MenuActivity extends TabActivity implements View.OnClickListener{
 
 
-    ToggleButton tgb1, tgb2;
+    ToggleButton tgb1, tgb2, tgb3;
     TabHost tabHost;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,11 @@ public class MenuActivity extends TabActivity implements View.OnClickListener{
 
         tgb1 = (ToggleButton) findViewById(R.id.toggleButton);
         tgb2 = (ToggleButton) findViewById(R.id.toggleButton2);
+        tgb3 = (ToggleButton) findViewById(R.id.toggleButton3);
+
         tgb1.setOnClickListener(this);
         tgb2.setOnClickListener(this);
+        tgb3.setOnClickListener(this);
 
         // получаем TabHost
         tabHost = getTabHost();
@@ -39,8 +42,13 @@ public class MenuActivity extends TabActivity implements View.OnClickListener{
         tabHost.addTab(tabSpec);
 
         tabSpec = tabHost.newTabSpec("tag2");
-        tabSpec.setIndicator("НАСТРОЙКИ");
+        tabSpec.setIndicator("МЕНЮ");
         tabSpec.setContent(new Intent(this, ActivityKassa.class));
+        tabHost.addTab(tabSpec);
+
+        tabSpec = tabHost.newTabSpec("tag3");
+        tabSpec.setIndicator("НАСТРОЙКИ");
+        tabSpec.setContent(new Intent(this, ActivitySettings.class));
         tabHost.addTab(tabSpec);
 
 
@@ -58,11 +66,20 @@ public class MenuActivity extends TabActivity implements View.OnClickListener{
             case R.id.toggleButton:
                 tabHost.setCurrentTab(0);
                 tgb2.setChecked(false);
+                tgb3.setChecked(false);
 
                 break;
             case R.id.toggleButton2:
                 tabHost.setCurrentTab(1);
                 tgb1.setChecked(false);
+                tgb3.setChecked(false);
+                break;
+
+            case R.id.toggleButton3:
+                tabHost.setCurrentTab(2);
+                tgb1.setChecked(false);
+                tgb2.setChecked(false);
+                break;
         }
 
     }

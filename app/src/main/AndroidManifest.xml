@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mkh.ua.grillbar">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -25,6 +27,8 @@
         <activity android:name=".ActivityKassa"
             android:screenOrientation="landscape"/>
         <activity android:name=".ActivityOtchet"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".ActivitySettings"
             android:screenOrientation="landscape"/>
 
     </application>

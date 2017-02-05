@@ -73,7 +73,7 @@
         <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
             android:padding="10dp">
@@ -120,18 +120,39 @@
                 android:background="@android:color/holo_green_dark"
                 android:textColor="@android:color/white"
                 android:textSize="30sp"
-                android:layout_above="@+id/button39" />
+                android:layout_above="@+id/bottom" />
 
-            <Button
-                android:text="Закрыть"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button39"
                 android:layout_alignParentBottom="true"
-                android:background="@android:color/darker_gray"
-                android:textSize="20sp"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="15dp" />
+                android:layout_marginTop="10dp"
+                android:id="@+id/bottom">
+
+                <Button
+                    android:text="Удалить"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button40"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginRight="5dp" />
+
+                <Button
+                    android:text="Закрыть"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button39"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/darker_gray"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
 
         </RelativeLayout>
 
